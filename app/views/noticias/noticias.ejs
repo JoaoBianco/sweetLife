@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Noticias</title>
+	
+  </head>
+  <body>
+    <h1>Noticias</h1>
+    <table>
+      <tr>
+        <td>Id</td>
+        <td>Titulo</td>
+	  </tr>
+
+	  <% for(let i = 0 ; i<noticias.length; i++){ %>
+      <tr>
+        <td><%= noticias[i].id_noticia%></td>
+        <td><%= noticias[i].titulo%></td>
+	  </tr>
+	  <%}%>
+    </table>
+  </body>
+</html>
