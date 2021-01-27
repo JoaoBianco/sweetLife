@@ -12,7 +12,6 @@ module.exports.noticias_salvar = (app, req, res) => {
   req.assert("autor", "Autor eh obrigatorio").notEmpty();
   req
     .assert("data_noticia", "Data eh obrigatorio")
-    .notEmpty()
     .isDate({ format: "YYYY-MM-DD" });
   req.assert("noticia", "Noticia eh obrigatorio").notEmpty();
 
