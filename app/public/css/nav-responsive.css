@@ -1,0 +1,122 @@
+@font-face {
+  font-family: titulos;
+  src: url(fonts/Andika.ttf);
+}
+
+body {
+  background-color: black;
+  font-family: titulos;
+}
+
+.nav-responsive {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-principal-responsive {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-responsive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu-responsive {
+  list-style: none;
+}
+
+.item-menu-responsive {
+  font-size: 2em;
+  padding: 20px 0 0 0;
+  color: #f0a3ca;
+}
+
+.btn-close-responsive img {
+  height: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+button.item-menu-responsive {
+  padding: 0;
+  margin-top: 15px;
+  border: none;
+  background-color: #f0a3ca;
+  color: white;
+  border-radius: 30px;
+  height: 50px;
+  width: 150px;
+}
+
+.item-menu-responsive::after,
+.item-menu-contatos::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: #f0a3ca;
+  position: relative;
+  left: 25%;
+  margin-top: 15px;
+}
+
+.item-menu-responsive img {
+  height: 250px;
+}
+
+.item-menu-responsive a,
+.item-menu-responsive a:hover {
+  color: #f0a3ca;
+}
+
+.menu-responsive .item-menu-responsive:last-child::after {
+  content: "";
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-responsive {
+    display: flex;
+  }
+}
+
+@media (max-width: 375.6px) {
+  .item-menu-responsive {
+    align-items: center;
+    font-size: 1em;
+    padding: 20px 0 0 0;
+    color: #f0a3ca;
+  }
+
+  .item-menu-responsive::after,
+  .item-menu-contatos::after {
+    content: "";
+    display: block;
+    width: 15%;
+    height: 1px;
+    background-color: #f0a3ca;
+    position: relative;
+    left: 42%;
+    margin-top: 15px;
+  }
+
+  .item-menu-responsive img {
+    height: 150px;
+  }
+}

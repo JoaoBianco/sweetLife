@@ -16,7 +16,14 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/header-responsive.css" />
+    <link rel="stylesheet" href="css/nav-responsive.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
 
     <title>Sweet Life</title>
     <link rel="shortcut icon" type="image/png" href="images/icon-logo.png" />
@@ -24,22 +31,36 @@
 
   <body>
     <nav>
-      <div class="responsive">
+      <div class="nav">
         <span class="btn-close-responsive"
-          ><img src="images/btn-fechar.svg" alt=""
+          ><img id="btn-close" src="images/btn-fechar.svg" alt=""
         /></span>
-        <ul class="menu-responsive">
-          <li class="item-menu-responsive">
-            <img src="images/Logo.png" alt="" />
-          </li>
-          <li class="item-menu-responsive">Home</li>
-          <li class="item-menu-responsive">Sobre</li>
-          <li class="item-menu-responsive">Contato</li>
-          <li class="item-menu-responsive">Cadastrar</li>
-          <button class="item-menu-responsive">Login</button>
+        <ul class="menu-principal">
+          <ul class="menu">
+            <li>
+              <a href=""><img class="logo" src="images/Logo.png" alt="" /></a>
+              <i id="hamburguer-responsive" class="fas fa-bars"></i>
+            </li>
+            <li class="item-menu">
+              <img src="images/Logo.png" alt="" />
+            </li>
+          </ul>
+          <ul class="menu">
+            <li class="item-menu"><a href="">Home</a></li>
+            <li class="item-menu"><a href="">Sobre</a></li>
+            <li class="item-menu">
+              <a class="item-menu-contatos" href="">Contatos</a>
+            </li>
+          </ul>
+          <ul class="menu">
+            <li class="item-menu"><a href="">Cadastrar</a></li>
+            <button class="item-menu">Login</button>
+          </ul>
         </ul>
       </div>
     </nav>
+
+    <script src="js/index-js.js"></script>
 
     <!-- Bootstrap JS -->
     <script
