@@ -5,7 +5,7 @@ var connMySQL = () => {
     host: "localhost",
     user: "root",
     password: "1234",
-    database: "sweet_life_db",
+    database: "portal_noticias",
   });
 };
 
