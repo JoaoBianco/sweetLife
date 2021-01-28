@@ -1,13 +1,3 @@
-@font-face {
-  font-family: titulos;
-  src: url(fonts/Andika.ttf);
-}
-
-body {
-  background-color: black;
-  font-family: titulos;
-}
-
 .nav-responsive {
   height: 100vh;
   width: 100%;

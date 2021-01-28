@@ -1,3 +1,13 @@
+@font-face {
+  font-family: titulos;
+  src: url(fonts/Andika.ttf);
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(0.3turn, pink, white);
+  font-family: titulos;
+}
 .hidden {
   display: none;
 }
@@ -24,13 +34,21 @@ a:hover {
 .menu-principal {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
+
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
+  padding: 0;
+}
+
+.menu:nth-child(2) {
+  position: relative;
+  margin-right: 30%;
+  float: left;
 }
 
 .item-menu {
@@ -76,7 +94,21 @@ button.item-menu {
   display: none;
 }
 
+.carrinho {
+  order: 1;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carrinho img {
+  height: 30px;
+}
+
 @media (max-width: 991.98px) {
+  .carrinho {
+    display: none;
+  }
+
   .menu:nth-child(2),
   .menu:nth-child(3) {
     display: none;
