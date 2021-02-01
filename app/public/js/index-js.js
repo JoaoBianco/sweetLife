@@ -1,49 +1,22 @@
-let botao = document.getElementById("hamburguer-responsive");
-let logo = document.querySelector(".logo");
-let btn_burguer = document.getElementById("hamburguer-responsive");
-let btn_close = document.getElementById("btn-close");
+const nav_slide = () => {
+  const burguer = document.querySelector(".burguer");
+  const nav = document.querySelector(".nav-links-custom");
+  const navLinks = document.querySelectorAll(".nav-links-custom-inner li");
 
-btn_close.addEventListener("click", () => {
-  logo.className = "logo";
-  btn_burguer.className = "fas fa-bars";
+  burguer.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
 
-  x = document.getElementsByClassName("menu-responsive");
-  y = document.getElementsByClassName("item-menu-responsive");
-  z = document.getElementsByClassName("nav-responsive");
-  w = document.getElementsByClassName("menu-principal-responsive");
-  while (y.length > 0) {
-    y[0].className = "item-menu";
-  }
-  while (x.length > 0) {
-    x[0].className = "menu";
-  }
-  while (z.length > 0) {
-    z[0].className = "nav";
-  }
-  while (w.length > 0) {
-    w[0].className = "menu-principal";
-  }
-});
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `nav-resp-items-animation 0.3s ease forwards ${
+          index / 7 + 0.1
+        }s`;
+      }
+    });
+    burguer.classList.toggle("toggle");
+  });
+};
 
-botao.addEventListener("click", () => {
-  let x = document.getElementsByClassName("menu");
-  let y = document.getElementsByClassName("item-menu");
-  let z = document.getElementsByClassName("nav");
-  let w = document.getElementsByClassName("menu-principal");
-
-  logo.className = "hidden";
-  btn_burguer.className = "hidden";
-
-  while (y.length > 0) {
-    y[0].className += "-responsive";
-  }
-  while (x.length > 0) {
-    x[0].className += "-responsive";
-  }
-  while (z.length > 0) {
-    z[0].className += "-responsive";
-  }
-  while (w.length > 0) {
-    w[0].className += "-responsive";
-  }
-});
+nav_slide();
