@@ -68,12 +68,12 @@ body {
   }
 
   .nav-links-custom {
+    display: none;
     position: absolute;
     right: 0px;
     top: 7vh;
     min-height: 93vh;
     background-color: #fff;
-    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -99,6 +99,7 @@ body {
 }
 
 .nav-active {
+  display: flex;
   transform: translateX(0%);
 }
 
