@@ -1,4 +1,4 @@
-module.exports.formulario_inclusao_noticia = (app, req, res) => {
+/*module.exports.formulario_inclusao_noticia = (app, req, res) => {
   res.render("admin/form_add_noticia", { validacao: {}, noticia: {} });
 };
 module.exports.noticias_salvar = (app, req, res) => {
@@ -32,3 +32,4 @@ module.exports.noticias_salvar = (app, req, res) => {
     //redirect por causa do POST
   });
 };
+*/

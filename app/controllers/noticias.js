@@ -1,4 +1,4 @@
-module.exports.noticias = (app, req, res) => {
+/*module.exports.noticias = (app, req, res) => {
   var connection = app.config.dbConnection();
 
   var noticiasModel = new app.app.models.noticiasDAO(connection);
@@ -19,3 +19,4 @@ module.exports.noticia = (app, req, res) => {
     res.render("noticias/noticia", { noticia: result });
   });
 };
+*/

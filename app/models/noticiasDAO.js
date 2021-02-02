@@ -1,4 +1,4 @@
-class NoticiasDAO {
+/*class NoticiasDAO {
   constructor(connection) {
     this._connection = connection;
   }
@@ -33,3 +33,4 @@ class NoticiasDAO {
 module.exports = () => {
   return NoticiasDAO;
 };
+*/

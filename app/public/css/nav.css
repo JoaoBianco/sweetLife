@@ -10,10 +10,10 @@
 }
 
 body {
-  height: 100vh;
   background: url("../images/background.png") no-repeat center;
   background-size: cover;
   font-family: titulos;
+  height: 100%;
 }
 
 .navbar-custom {
@@ -97,15 +97,11 @@ body {
 }
 
 .car img {
-  width: 2.3em;
+  width: 1.4em;
   margin: 25px;
 }
 
 @media screen and (max-width: 924px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .nav-links-custom-inner .nav-login {
     width: 4em;
   }

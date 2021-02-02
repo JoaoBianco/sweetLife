@@ -1,4 +1,4 @@
-module.exports = (app) => {
+/*module.exports = (app) => {
   app.get("/noticias", (req, res) => {
     app.app.controllers.noticias.noticias(app, req, res);
   });
@@ -7,3 +7,4 @@ module.exports = (app) => {
     app.app.controllers.noticias.noticia(app, req, res);
   });
 };
+*/
