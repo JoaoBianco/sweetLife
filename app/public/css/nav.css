@@ -11,7 +11,8 @@
 
 body {
   height: 100vh;
-  background-image: linear-gradient(0.3turn, pink, white);
+  background: url("../images/background.png") no-repeat center;
+  background-size: cover;
   font-family: titulos;
 }
 
@@ -61,6 +62,17 @@ body {
   display: none;
 }
 
+.nav-links-custom-inner .nav-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f0a3ca;
+  color: white;
+  border-radius: 15px;
+  height: 2em;
+}
+
 .burguer {
   display: none;
   cursor: pointer;
@@ -74,9 +86,28 @@ body {
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
+.last-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car {
+  order: -1;
+}
+
+.car img {
+  width: 2.3em;
+  margin: 25px;
+}
+
+@media screen and (max-width: 924px) {
   body {
     overflow-x: hidden;
+  }
+
+  .nav-links-custom-inner .nav-login {
+    width: 4em;
   }
 
   .container-nav {
@@ -150,12 +181,17 @@ body {
   }
   to {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(100px);
   }
 }
 
+.back {
+  animation: line2-anim 0.4s forwards reverse;
+  opacity: 1;
+}
+
 .toggle .line2 {
-  animation: line2-anim 0.6s;
+  animation: line2-anim 0.4s forwards;
   opacity: 0;
 }
 
