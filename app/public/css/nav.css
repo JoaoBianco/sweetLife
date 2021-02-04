@@ -46,7 +46,18 @@ body {
 .nav-links-custom-inner li a {
   margin: 15px;
   text-decoration: none;
+  color: #f2b5d4;
+}
+
+.nav-links-custom-inner li a:hover {
   color: #f0a3ca;
+}
+
+.nav-links-custom-inner li .nav-login:hover {
+  color: #f0a3ca;
+  background-color: white;
+  border: 2px solid #f0a3ca;
+  padding: 4px 18px 4px 18px;
 }
 
 .nav-links-custom-inner li:after {
@@ -63,14 +74,10 @@ body {
 }
 
 .nav-links-custom-inner .nav-login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   background-color: #f0a3ca;
   color: white;
   border-radius: 15px;
-  height: 2em;
+  padding: 5px 20px 5px 20px;
 }
 
 .burguer {
@@ -97,13 +104,25 @@ body {
 }
 
 .car img {
-  width: 1.4em;
-  margin: 25px;
+  width: 1.6em;
+  margin: 10px;
 }
 
 @media screen and (max-width: 924px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .nav-links-custom-inner .nav-login {
-    width: 4em;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .nav-links-custom-inner li .nav-login:hover {
+    color: #f0a3ca;
+    background-color: white;
+    border: 2px solid #f0a3ca;
+    padding: 4px 48px 4px 48px;
   }
 
   .container-nav {
@@ -134,7 +153,7 @@ body {
   .nav-links-custom ul li {
     font-size: 2em;
     opacity: 0;
-    margin: 15px;
+    margin: 10px;
   }
 
   .burguer {
@@ -145,11 +164,12 @@ body {
     content: "";
     display: none;
   }
-}
 
-.nav-active {
-  display: flex;
-  transform: translateX(0%);
+  .nav-active {
+    z-index: 2;
+    display: flex;
+    transform: translateX(0%);
+  }
 }
 
 @keyframes nav-resp-items-animation {
@@ -200,4 +220,8 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.no-down {
+  overflow: hidden;
 }

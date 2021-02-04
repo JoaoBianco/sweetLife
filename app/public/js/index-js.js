@@ -2,6 +2,7 @@ const nav_slide = () => {
   const burguer = document.querySelector(".burguer");
   const nav = document.querySelector(".nav-links-custom");
   const navLinks = document.querySelectorAll(".nav-links-custom-inner li");
+  const body = document.querySelector("body");
 
   burguer.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -15,6 +16,7 @@ const nav_slide = () => {
         }s`;
       }
     });
+    body.classList.toggle("no-down");
     burguer.classList.toggle("toggle");
   });
 };
