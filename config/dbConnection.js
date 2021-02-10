@@ -1,14 +1,15 @@
 var mysql = require("mysql");
-require('dotenv/config');
+require("dotenv/config");
 
-var connection = mysql.createConnection({
-  host: process.env.DB_HOST_KEY,
-  user: process.env.DB_USER_KEY,
-  password: process.env.DB_PASSWORD_KEY,
-  database: process.env.DB_SCHEMA_KEY,
-});
-
-var connection;
+var connMSQL = () => {
+  var connection = mysql.createConnection({
+    host: process.env.DB_HOST_KEY,
+    user: process.env.DB_USER_KEY,
+    password: process.env.DB_PASSWORD_KEY,
+    database: process.env.DB_SCHEMA_KEY,
+  });
+  return connection;
+};
 
 function handleDisconnect() {
   connection = mysql.createConnection("dbConnection.js"); // Recreate the connection, since
@@ -36,3 +37,7 @@ function handleDisconnect() {
 }
 
 handleDisconnect();
+
+module.exports = () => {
+  return connMSQL;
+};
