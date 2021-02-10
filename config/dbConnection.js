@@ -1,10 +1,10 @@
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  host: "us-cdbr-east-03.cleardb.com",
-  user: "b2bdf5e20ca626",
-  password: "36b97c49",
-  database: "heroku_aba9054eba0552f",
+  host: DB_HOST_KEY,
+  user: DB_USER_KEY,
+  password: DB_PASSWORD_KEY,
+  database: DB_SCHEMA_KEY,
 });
 
 var connection;
