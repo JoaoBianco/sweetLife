@@ -1,0 +1,35 @@
+#inicio {
+  height: 93vh;
+  width: 100vw;
+  background: #fff;
+  background: linear-gradient(
+    145deg,
+    rgba(240, 163, 202, 0.6) 26%,
+    rgba(240, 163, 202, 0.4) 51%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.row-inicio {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+#inicio .row {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#inicio h2 {
+  line-height: 1.2em;
+}
+
+#inicio .btn {
+  background-color: rgb(240, 163, 202);
+  color: white;
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+}
