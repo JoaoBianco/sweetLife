@@ -3,16 +3,21 @@ require("dotenv/config");
 
 var connMSQL = () => {
   var connection = mysql.createConnection({
-    host: process.env.DB_HOST_KEY,
-    user: process.env.DB_USER_KEY,
-    password: process.env.DB_PASSWORD_KEY,
-    database: process.env.DB_SCHEMA_KEY,
+    // host: process.env.DB_HOST_KEY,
+    // user: process.env.DB_USER_KEY,
+    // password: process.env.DB_PASSWORD_KEY,
+    // database: process.env.DB_SCHEMA_KEY,
+    host: "us-cdbr-east-03.cleardb.com",
+    user: "b37f28773e88a7",
+    password: "b47f205c",
+    database: "heroku_4c3b64074699933",
   });
   return connection;
 };
 
 function handleDisconnect() {
   connection = mysql.createConnection("dbConnection.js"); // Recreate the connection, since
+
   // the old one cannot be reused.
 
   connection.connect(function (err) {

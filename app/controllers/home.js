@@ -5,9 +5,15 @@ module.exports.index = (app, req, res) => {
   res.render("home/index", { noticias: result });
    });
    */
+  console.log(connection);
   teste.getAll((error, result) => {
-    //res.render("home/index", { teste: result });
-    //console.log(result);
+    console.log("AA");
+    console.log("AA");
+    console.log("AA");
+    console.log("AA");
+    console.log("AA");
+    console.log(result);
+    res.render("home/index", { teste: result });
   });
   //res.render("home/index");
 };
