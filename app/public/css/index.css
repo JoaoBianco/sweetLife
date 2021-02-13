@@ -33,3 +33,97 @@
   height: 50px;
   border-radius: 50px;
 }
+
+#loja {
+  height: 93vh;
+  width: 100vw;
+  background: white;
+  
+}
+
+/* Float four columns side by side */
+.coluna {
+  float: left;
+  width: 24%;
+  padding: 10px;
+  padding-top: 50px;
+  padding-left: 30px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.linha {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.linha:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .coluna {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.coluna img {
+  border-radius: 60%;
+}
+
+
+/* Style product cards */
+.card_produto  {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #F7D6E0;
+  border-radius: 10px;
+}
+.dbtn_info{
+  right: 0;
+}
+.btn_informacao{
+  background-color: white;
+  border: none;
+  border-radius: 100%;
+  padding: 8px 16px;
+  color: green;
+}
+.btn_informacao:hover {
+  background-color: magenta;
+  color: white;
+}
+
+.btn_carrinho{
+    background-color: #1F91A7;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+  
+}
+.btn_carrinho:hover {background-color: #0C7A8F}
+
+
+
+#navbar {
+  overflow: hidden;
+  background-color:white ;
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
