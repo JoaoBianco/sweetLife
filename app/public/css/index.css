@@ -1,44 +1,8 @@
-#inicio {
-  height: 93vh;
-  width: 100vw;
-  background: #fff;
-  background: linear-gradient(
-    145deg,
-    rgba(240, 163, 202, 0.6) 26%,
-    rgba(240, 163, 202, 0.4) 51%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.row-inicio {
-  height: 100%;
-  width: 100%;
-  color: white;
-}
-
-#inicio .row {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-}
-
-#inicio h2 {
-  line-height: 1.2em;
-}
-
-#inicio .btn {
-  background-color: rgb(240, 163, 202);
-  color: white;
-  width: 250px;
-  height: 50px;
-  border-radius: 50px;
-}
-
 #loja {
+  margin-top: 50px;
   height: 93vh;
-  width: 100vw;
+  width: 98vw;
   background: white;
-  
 }
 
 /* Float four columns side by side */
@@ -51,7 +15,6 @@
 }
 
 /* Remove extra left and right margins, due to padding */
-.linha {margin: 0 -5px;}
 
 /* Clear floats after the columns */
 .linha:after {
@@ -61,30 +24,41 @@
 }
 
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991.98px) {
   .coluna {
-    width: 100%;
+    width: 85%;
     display: block;
     margin-bottom: 20px;
   }
+  .linha {
+    margin: 0 10% 0 10%;
+  }
 }
+
+@media screen and (max-width: 767.98px) {
+  .coluna {
+    width: 100%;
+  }
+}
+
 .coluna img {
   border-radius: 60%;
 }
 
-
 /* Style product cards */
-.card_produto  {
+.card_produto {
+  position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #F7D6E0;
+  background-color: #f7d6e0;
   border-radius: 10px;
 }
-.dbtn_info{
-  right: 0;
+.dbtn_info {
+  right: 10px;
+  position: absolute;
 }
-.btn_informacao{
+.btn_informacao {
   background-color: white;
   border: none;
   border-radius: 100%;
@@ -96,23 +70,22 @@
   color: white;
 }
 
-.btn_carrinho{
-    background-color: #1F91A7;
-    border: none;
-    border-radius: 15px;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-  
+.btn_carrinho {
+  background-color: #1f91a7;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
 }
-.btn_carrinho:hover {background-color: #0C7A8F}
-
-
+.btn_carrinho:hover {
+  background-color: #0c7a8f;
+}
 
 #navbar {
   overflow: hidden;
-  background-color:white ;
+  background-color: white;
 }
 .content {
   padding: 16px;
