@@ -1,0 +1,111 @@
+#cadastro-container {
+  height: 93vh;
+  margin-top: 7vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+form {
+  position: relative;
+}
+
+#cadastro-container form {
+  padding: 50px;
+  width: 30%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 7px 7px 30px 3px rgba(77, 77, 77, 0.1);
+  border-radius: 60px;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.btn-custom {
+  background-color: #f7d6e0;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 150px;
+}
+
+form label {
+  color: #f2b5d4;
+}
+
+.form-control,
+::placeholder {
+  color: #3535357e !important;
+}
+
+.form-control {
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #cacaca;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+label {
+  margin: 1em 0 0.5em 0.5em;
+}
+
+@media (max-width: 575.98px) {
+  #cadastro-container {
+    height: 100%;
+  }
+  #cadastro-container form {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 80vw;
+    height: 100%;
+    padding: 20px 25px 10px 25px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #cadastro-container form {
+    margin-top: 25px;
+    padding: 20px 25px 10px 25px;
+    width: 70vw;
+    height: 100%;
+  }
+
+  label {
+    margin-top: 0.3em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #cadastro-container form {
+    width: 70vw;
+    padding: 25px;
+    height: 90%;
+  }
+  label {
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  #cadastro-container form {
+    width: 50vw;
+  }
+  label {
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+}
