@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/cadastro.css" />
+    <link rel="stylesheet" href="css/login.css" />
 
     <link
       rel="stylesheet"
@@ -76,89 +77,19 @@
       </div>
     </nav>
 
-    <section id="cadastro-container">
+    <section id="login-container">
       <form>
         <div class="form-row">
-          <div class="col-md-6">
-            <label for="nome">Nome</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nome"
-              aria-describedby="emailHelp"
-              placeholder="Digite seu nome"
-            />
-          </div>
-          <div class="col-md-6">
-            <label for="sobrenome">Sobrenome</label>
-            <input
-              type="text"
-              class="form-control"
-              id="sobrenome"
-              aria-describedby="emailHelp"
-              placeholder="Digite seu sobrenome"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
+          <div class="col-md-12">
             <label for="email">Email</label>
             <input
               type="email"
               class="form-control"
               id="email"
+              aria-describedby="emailHelp"
               placeholder="Digite seu email"
             />
           </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <label for="endereco">Endereco</label>
-            <input
-              type="text"
-              class="form-control"
-              id="endereco"
-              placeholder="Digite seu endereco"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col">
-            <label for="bairro">Bairro</label>
-            <input
-              type="text"
-              class="form-control"
-              id="bairro"
-              placeholder="Digite seu bairro"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="col-md-6">
-            <label for="numero">Numero</label>
-            <input
-              type="text"
-              class="form-control"
-              id="numero"
-              placeholder="Digite o numero"
-            />
-          </div>
-          <div class="col-md-6">
-            <label for="complemento">Complemento</label>
-            <input
-              type="text"
-              class="form-control"
-              id="complemento"
-              placeholder="Ex.: apto xx"
-            />
-          </div>
-        </div>
-
-        <div class="form-row">
           <div class="col-md-12">
             <label for="senha">Senha</label>
             <input
@@ -168,18 +99,10 @@
               placeholder="Digite sua senha"
             />
           </div>
-          <div class="col-md-12">
-            <label for="conf-senha">Confirmar senha</label>
-            <input
-              type="password"
-              class="form-control"
-              id="conf-senha"
-              placeholder="Digite sua senha"
-            />
-          </div>
         </div>
+
         <div class="botao">
-          <button type="submit" class="btn-custom">Cadastrar</button>
+          <button type="submit" class="btn-custom">Login</button>
         </div>
       </form>
     </section>

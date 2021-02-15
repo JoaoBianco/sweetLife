@@ -1,0 +1,60 @@
+#login-container {
+  height: 93vh;
+  margin-top: 7vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  caret-color: #f2b5d4;
+}
+
+form {
+  position: relative;
+  padding: 50px;
+  width: 30%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 7px 7px 30px 3px rgba(0, 0, 0, 0.041);
+  border-radius: 60px;
+}
+
+.btn-custom {
+  width: 50%;
+}
+
+@media (max-width: 575.98px) {
+  #login-container form {
+    width: 90vw;
+  }
+  .btn-custom {
+    width: 60%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #login-container form {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #login-container form {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 992px) {
+  #login-container form {
+    width: 35vw;
+  }
+  label {
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+}
