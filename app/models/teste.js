@@ -34,15 +34,15 @@ module.exports = () => {
   return NoticiasDAO;
 };
 */
-class teste {
+class produto {
   constructor(connection) {
     this._connection = connection;
   }
   getAll = (callback) => {
-    this._connection.query("select * from teste", callback);
+    this._connection.query("select * from produto", callback);
   };
 }
 
 module.exports = () => {
-  return teste;
+  return produto;
 };
