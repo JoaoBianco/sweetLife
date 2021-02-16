@@ -23,6 +23,13 @@
   clear: both;
 }
 
+.linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 /* Responsive columns */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .coluna {
@@ -43,6 +50,8 @@
 
 .coluna img {
   border-radius: 60%;
+  -webkit-box-shadow: 12px 14px 18px 0px rgba(155, 155, 155, 0.72);
+  box-shadow: 12px 14px 18px 0px rgba(155, 155, 155, 0.72);
 }
 
 /* Style product cards */
@@ -54,6 +63,10 @@
   background-color: #f7d6e0;
   border-radius: 10px;
   height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .dbtn_info {
