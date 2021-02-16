@@ -76,149 +76,104 @@
       </div>
     </nav>
 
-    <!-- Loja Produtos - Cards-->
-    <section id="loja">
-      <div class="linha">
-        <div class="coluna">
-          <div class="card_produto">
-            <img src="images/donut.jpg" alt="produto" style="width: 75%" />
-            <br />
-            <div class="dbtn_info">
-              <!-- Modal informação produto -->
-              <div
-                class="modal fade bd-example-modal-lg"
-                tabindex="-1"
-                role="dialog"
-                aria-labelledby="myLargeModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col align-self-center">
-                            <h1>Donuts</h1>
-                          </div>
-                        </div>
+    <!-- Loja Produtos - Cards -->
+<section id="loja">
+  <div class="linha">
 
-                        <div class="row">
-                          <div class="col-md-6">
-                            <img
-                              src="images/donut.jpg"
-                              alt="produto"
-                              style="width: 75%"
-                            />
-                          </div>
-                          <div class="col-md-6">
-                            <div class="row">
-                              <div class="col-sm-12">
-                                Lorem ipsum dolor sit, amet consectetur
-                                adipisicing elit. Non, eaque error? Doloribus
-                                est qui perspiciatis, magnam earum accusantium
-                                necessitatibus molestias quam sint sit,
-                                recusandae error
-                                <br />
-                                <div class="row">
-                                  <div class="col col-sm-6">
-                                    <button
-                                      type="button"
-                                      class="btn btn-primary btn-sm"
-                                    >
-                                      -
-                                    </button>
-                                    1
-                                    <button
-                                      type="button"
-                                      class="btn btn-primary btn-sm"
-                                    >
-                                      +
-                                    </button>
-                                  </div>
-                                  <div class="col col-sm-6">
-                                    <button class="btn_carrinho">
-                                      <i class="fas fa-shopping-cart"></i>
-                                      Adicionar ao carrinho
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
+    <%for(let i = 0; i<produto.length;i++){%>
+      <div class="dbtn_info">
+        <!-- Modal informação produto -->
+        <div
+          id="btnId_<%=produto[i].id%>"
+          class="modal fade bd-example-modal-lg"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myLargeModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="container-fluid">
+                    
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <img
+                        src="assets/<%=produto[i].id%>.jpeg"
+                        alt="produto"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="col-lg-5 flex-modal-custom">
+                      <div class="row">
+                      <h1><%=produto[i].nome%></h1>
+                      </div>
+                      <div class="row">
+                      <p>
+                        <%=produto[i].descricao%>
+                      </p>
+                      </div>
+                      <div class="row">
+                        <p>
+                          R$<%=produto[i].preco%>,00
+                        </p>
+                        </div>
+                          <div class="row flex-custom-row">
+                            <div class="col-6">
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                              >
+                                -
+                              </button>
+                              1
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-sm"
+                              >
+                                +
+                              </button>
+                            </div>
+                            <div class="col-6">
+                              <button class="btn_carrinho">
+                                <i class="fas fa-shopping-cart"></i>
+                                Adicionar ao carrinho
+                              </button>
                             </div>
                           </div>
-                        </div>
-                      </div>
                     </div>
+                          
                   </div>
                 </div>
               </div>
-
-              <button
-                type="button"
-                class="btn_informacao"
-                data-toggle="modal"
-                data-target=".bd-example-modal-lg"
-              >
-                i
-              </button>
             </div>
-            <h1>Donuts</h1>
-            <p class="price">$19.99</p>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa
-              as pessoas mais interessantis
-            </p>
-            <button class="btn_carrinho">
-              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
-            </button>
-          </div>
-        </div>
-
-        <div class="coluna">
-          <div class="card_produto">
-            <img src="images/donut.jpg" alt="produto" style="width: 75%" />
-            <h1>Donuts</h1>
-            <p class="price">$19.99</p>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa
-              as pessoas mais interessantis
-            </p>
-            <button class="btn_carrinho">
-              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
-            </button>
-          </div>
-        </div>
-
-        <div class="coluna">
-          <div class="card_produto">
-            <img src="images/donut.jpg" alt="produto" style="width: 75%" />
-            <h1>Donuts</h1>
-            <p class="price">$19.99</p>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa
-              as pessoas mais interessantis
-            </p>
-            <button class="btn_carrinho">
-              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
-            </button>
-          </div>
-        </div>
-
-        <div class="coluna">
-          <div class="card_produto">
-            <img src="images/donut.jpg" alt="produto" style="width: 75%" />
-            <h1>Donuts</h1>
-            <p class="price">$19.99</p>
-            <p>
-              Mussum Ipsum, cacilds vidis litro abertis. Suco de cevadiss deixa
-              as pessoas mais interessantis
-            </p>
-            <button class="btn_carrinho">
-              <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
-            </button>
           </div>
         </div>
       </div>
-    </section>
+
+
+    <div class="coluna">
+        <div class="card_produto">
+          <a href="" data-toggle="modal"
+          data-target="#btnId_<%=produto[i].id%>">
+            <img src="assets/<%=produto[i].id%>.jpeg" alt="produto" style="width: 75%; height: 200px;" />
+          </a>
+        
+        
+        <h1><%=produto[i].nome%></h1>
+        <p class="price">R$<%=produto[i].preco%>,00</p>
+        <p>
+          <%=produto[i].descricao%>
+        </p>
+        <button class="btn_carrinho">
+          <i class="fas fa-shopping-cart"></i> Adicionar ao carrinho
+        </button>
+      </div>
+    </div>
+    <%}%>
+    
+  </div>
+</section>
 
     <script src="js/index-js.js"></script>
 
