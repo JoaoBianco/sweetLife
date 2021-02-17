@@ -17,7 +17,6 @@ var connMSQL = () => {
 
 function handleDisconnect() {
   connection = mysql.createConnection("dbConnection.js"); // Recreate the connection, since
-
   // the old one cannot be reused.
 
   connection.connect(function (err) {
