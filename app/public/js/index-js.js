@@ -21,4 +21,19 @@ const nav_slide = () => {
   });
 };
 
+const quantidade = (op, id) => {
+  var numb = parseInt(document.querySelector(`.number_${id}`).innerHTML);
+
+  if (op === "add") {
+    numb += 1;
+  } else {
+    if (numb > 1) {
+      numb -= 1;
+    }
+  }
+
+  document.querySelector(`.number_${id}`).innerHTML = numb;
+  document.querySelector(`.number_modal_${id}`).innerHTML = numb;
+};
+
 nav_slide();

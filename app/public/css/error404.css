@@ -1,7 +1,6 @@
 #error {
   width: 100vw;
-  height: 93vh;
-  margin-top: 7vh;
+  height: 100vh;
   background-image: url("../images/404error.jpg");
   background-position: center;
   background-size: cover;
