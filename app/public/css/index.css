@@ -1,14 +1,87 @@
-#loja {
-  width: 100%;
+#box-dropdown {
   margin-top: 7vh;
-}
-
-#loja .container {
+  height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-img-top {
-  height: 250px;
+#box-dropdown .container-dropdown {
+  width: 80%;
+  height: 100%;
+  padding-top: 3vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-bottom: 2px solid #f7d6e0;
+}
+
+.box-doces {
+  position: relative;
+}
+
+.box-doces select,
+.box-doces input {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid #f7d6e0;
+  background-color: white;
+}
+
+.box-doces input:focus,
+.box-doces select:focus {
+  outline: none;
+}
+
+.btn-search {
+  border: none;
+  background-color: white;
+  color: black;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.modal-content button.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 767.98px) {
+  #loja {
+    margin-top: 7vh;
+  }
+  #box-dropdown .container-dropdown {
+    margin-top: 35px;
+    padding-bottom: 15px;
+    height: 180%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box-doces select,
+  .box-doces input {
+    width: 70vw;
+  }
+
+  .modal-content button.close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 2;
+  }
+
+  #box-dropdown .container-dropdown .box-doces:first-child {
+    order: 2;
+    margin-top: 10px;
+  }
+  #box-dropdown .container-dropdown .box-doces:last-child {
+    order: 1;
+  }
 }

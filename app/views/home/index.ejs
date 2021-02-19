@@ -76,6 +76,23 @@
       </div>
     </nav>
 
+    <section id="box-dropdown">
+      <div class="container-dropdown">
+        <div class="box-doces">
+          <select name="doces" id="doces">
+            <option value="">Filtro</option>
+            <option value="tradicional">Tradicional</option>
+            <option value="diet">Diet</option>
+            <option value="vegano">Vegano</option>
+            <option value="com_rutas">Com Frutas</option>
+          </select>
+        </div>
+        <div class="box-doces">
+          <input type="text"><button class="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </section>
+
     <!-- Loja Produtos - Cards -->
     <section id="loja">
       <div class="linha">
@@ -92,6 +109,9 @@
           >
             <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <i aria-hidden="true" class="far fa-times-circle"></i>
+                </button>
                 <div class="modal-body">
                   <div class="container-fluid">
                     <div class="row">

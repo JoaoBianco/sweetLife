@@ -1,5 +1,4 @@
 #loja {
-  margin-top: 50px;
   height: 93vh;
   width: 98vw;
   background: white;
@@ -128,7 +127,6 @@
 .card_produto h1 {
   width: 80%;
 }
-
 /* Responsive columns */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .coluna {
