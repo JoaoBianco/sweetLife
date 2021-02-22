@@ -37,3 +37,14 @@ const quantidade = (op, id) => {
 };
 
 nav_slide();
+
+var filtro = document.getElementById('doces');
+filtro.addEventListener('change', async (e) => {
+    const node = await fetch('http://localhost:3306', {
+        method: 'POST',
+        body: JSON.stringify(e.value)
+    });
+    const data = await node.json();
+
+    console.log(data)
+})

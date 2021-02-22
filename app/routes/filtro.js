@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    app.get("/filtro", (req, res) => {
+    app.post("/", (req, res) => {
         // nova view
       app.app.controllers.home.index(app, req, res);
     });
