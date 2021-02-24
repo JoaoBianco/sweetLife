@@ -62,10 +62,8 @@ body {
 }
 
 .nav-links-custom-inner li:after {
-  content: "";
-  background-color: #f0a3ca;
-  width: 2px;
-  height: 14px;
+  content: "|";
+  color: #f0a3ca;
   display: inline-block;
 }
 
