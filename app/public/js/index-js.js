@@ -38,13 +38,7 @@ const quantidade = (op, id) => {
 
 nav_slide();
 
-var filtro = document.getElementById('doces');
-filtro.addEventListener('change', async (e) => {
-    const node = await fetch('http://localhost:3306', {
-        method: 'POST',
-        body: JSON.stringify(e.value)
-    });
-    const data = await node.json();
-
-    console.log(data)
-})
+document.querySelector(".btn-search").onclick = () => {
+  const query = document.querySelector(".input-search").value
+  window.location.href = "/search/"+query
+}

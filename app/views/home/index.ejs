@@ -22,9 +22,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/produto.css" />
+    <link rel="stylesheet" href="/css/nav.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/produto.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -33,7 +33,7 @@
     />
 
     <title>Sweet Life</title>
-    <link rel="shortcut icon" type="image/png" href="images/icon-logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/images/icon-logo.png" />
   </head>
 
   <body>
@@ -56,10 +56,10 @@
           </ul>
           <ul class="nav-links-custom-inner">
             <li>
-              <a href="./cadastro">Cadastrar</a>
+              <a href="/cadastro">Cadastrar</a>
             </li>
             <li>
-              <a class="nav-login" href="./login">Login</a>
+              <a class="nav-login" href="/login">Login</a>
             </li>
           </ul>
         </ul>
@@ -70,7 +70,7 @@
             <div class="line3"></div>
           </div>
           <div class="car">
-            <a href=""><img src="images/Carrinho.svg" alt="" /></a>
+            <!--<a href=""><img src="../../public/images/Carrinho.svg" alt="" /></a>-->
           </div>
         </div>
       </div>
@@ -79,16 +79,29 @@
     <section id="box-dropdown">
       <div class="container-dropdown">
         <div class="box-doces">
-          <select name="doces" id="doces">
-            <option value="">Filtro</option>
-            <option value="tradicional">Tradicional</option>
-            <option value="diet">Diet</option>
-            <option value="vegano">Vegano</option>
-            <option value="com_rutas">Com Frutas</option>
-          </select>
+          <!--
+            <select name="doces" id="doces">
+              <option value="" disabled selected>Filtro</option>
+              <option value="/filter/1">Tradicional</option>
+              <option value="/filter/2">Diet</option>
+              <option value="/filter/3">Vegano</option>
+              <option value="/filter/4">Com Frutas</option>
+            </select>
+          -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filtro
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="/filter/1">Tradicional</a>
+              <a class="dropdown-item" href="/filter/2">Diet</a>
+              <a class="dropdown-item" href="/filter/3">Vegano</a>
+              <a class="dropdown-item" href="/filter/4">Com frutas</a>
+            </div>
+          </div>
         </div>
         <div class="box-doces">
-          <input type="text"><button class="btn-search"><i class="fas fa-search"></i></button>
+          <input type="search" class="input-search"><button class="btn-search"><i class="fas fa-search"></i></button>
         </div>
       </div>
     </section>
@@ -117,10 +130,11 @@
                     <div class="row">
                       <div class="col-lg-7">
                         <img
-                          src="assets/<%=produto[i].id%>.jpeg"
+                          src="https://raw.githubusercontent.com/JoaoBianco/sweetLife/main/app/public/assets/<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>.jpeg"
                           alt="produto"
                           class="produto_modal"
                         />
+                        
                       </div>
                       <div class="col-lg-5 flex-modal-custom">
                         <div class="row">
@@ -136,13 +150,13 @@
                           <div class="seletores">
                             <div class="quantity_selector">
                               <button
-                                onclick="quantidade('sub','<%=produto[i].id%>')"
+                                onclick="quantidade('sub','<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>')"
                               >
                                 -
                               </button>
-                              <p class="number_modal_<%=produto[i].id%>">1</p>
+                              <p class="number_modal_<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>">1</p>
                               <button
-                                onclick="quantidade('add','<%=produto[i].id%>')"
+                                onclick="quantidade('add','<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>')"
                               >
                                 +
                               </button>
@@ -170,7 +184,7 @@
             >
               <img
                 class="img-product"
-                src="assets/<%=produto[i].id%>.jpeg"
+                src="https://raw.githubusercontent.com/JoaoBianco/sweetLife/main/app/public/assets/<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>.jpeg"
                 alt="produto"
               />
             </a>
@@ -179,11 +193,11 @@
             
             <div class="seletores">
               <div class="quantity_selector">
-                <button onclick="quantidade('sub','<%=produto[i].id%>')">
+                <button onclick="quantidade('sub','<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>')">
                   -
                 </button>
-                <p class="number_<%=produto[i].id%>">1</p>
-                <button onclick="quantidade('add','<%=produto[i].id%>')">
+                <p class="number_<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>">1</p>
+                <button onclick="quantidade('add','<%=produto[i].idProduto ? produto[i].idProduto:produto[i].id%>')">
                   +
                 </button>
               </div>
