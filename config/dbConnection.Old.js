@@ -1,8 +1,8 @@
 var mysql = require("mysql");
-//require("dotenv/config");
+require("dotenv/config");
 
-var poolMSQL = () => {
-  var connection = mysql.createPool({ //Cria uma Pool ao invés de uma conection
+var connMSQL = () => {
+  var connection = mysql.createConnection({
     // host: process.env.DB_HOST_KEY,
     // user: process.env.DB_USER_KEY,
     // password: process.env.DB_PASSWORD_KEY,
@@ -16,10 +16,10 @@ var poolMSQL = () => {
 };
 
 function handleDisconnect() {
-  connection = mysql.createPool("dbConnection.js"); // Recreate the connection, since
+  connection = mysql.createConnection("dbConnection.js"); // Recreate the connection, since
   // the old one cannot be reused.
 
-  connection.getConnection(function (err) {
+  connection.connect(function (err) {
     // The server is either down
     if (err) {
       // or restarting (takes a while sometimes).
@@ -43,5 +43,5 @@ function handleDisconnect() {
 handleDisconnect();
 
 module.exports = () => {
-  return poolMSQL;
+  return connMSQL;
 };
