@@ -34,6 +34,7 @@ module.exports = () => {
   return NoticiasDAO;
 };
 */
+
 class produto {
   constructor(connection) {
     this._connection = connection;
@@ -42,8 +43,8 @@ class produto {
     this._connection.query("select * from produto", callback);
   };
   
-  getFilter = (callback) => {
-    this._connection.query("select * from produto join produtoCategoria on produto.id = produtoCategoria.idProduto where produtoCategoria.idCategoria = 1;", callback);
+  getFilter = (id, callback) => {
+    this._connection.query("select * from produto join produtoCategoria on produto.id = produtoCategoria.idProduto where produtoCategoria.idCategoria = ?", id, callback);
   };
 }
 

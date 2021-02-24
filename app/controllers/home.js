@@ -1,3 +1,5 @@
+const teste = require("../models/teste");
+
 module.exports.index = (app, req, res) => {
   var connection = app.config.dbConnection();
   var teste = new app.app.models.teste(connection);
@@ -5,10 +7,19 @@ module.exports.index = (app, req, res) => {
   res.render("home/index", { noticias: result });
    });
    */
-  console.log(connection);
+
   teste.getAll((error, result) => {
     console.log(result);
     res.render("home/index", { produto: result });
   });
-  //res.render("home/index");
+
+};
+
+module.exports.filter = (app, req, res) => {
+  var connection = app.config.dbConnection();
+  var teste = new app.app.models.teste(connection);
+
+  teste.getFilter(req.params.id, function(error, result) {
+    res.render("home/index", { produto: result})
+  })
 };
