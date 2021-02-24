@@ -7,7 +7,7 @@ module.exports.index = (app, req, res) => {
    */
   console.log(connection);
   teste.getAll((error, result) => {
-    console.log(result);
+    // console.log(result);
     res.render("home/index", { produto: result });
   });
   //res.render("home/index");
