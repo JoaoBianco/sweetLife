@@ -1,10 +1,10 @@
-const teste = require("../models/teste");
+const home = require("../models/home");
 
 module.exports.index = (app, req, res) => {
   var connection = app.config.dbConnection;
-  var teste = new app.app.models.teste(connection);
+  var home = new app.app.models.home(connection);
 
-  teste.getAll((error, result) => {
+  home.getAll((error, result) => {
     res.render("home/index", { produto: result });
   });
 
@@ -12,18 +12,18 @@ module.exports.index = (app, req, res) => {
 
 module.exports.filter = (app, req, res) => {
   var connection = app.config.dbConnection;
-  var teste = new app.app.models.teste(connection);
+  var home = new app.app.models.home(connection);
 
-  teste.getFilter(req.params.id, function(error, result) {
+  home.getFilter(req.params.id, function(error, result) {
     res.render("home/index", { produto: result})
   })
 };
 
 module.exports.search = (app, req, res) => {
   var connection = app.config.dbConnection;
-  var teste = new app.app.models.teste(connection);
+  var home = new app.app.models.home(connection);
 
-  teste.search(req.params.query, function(error, result) {
+  home.search(req.params.query, function(error, result) {
     res.render("home/index", { produto: result})
   })
 };
