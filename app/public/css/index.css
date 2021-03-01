@@ -1,5 +1,5 @@
 #box-dropdown {
-  margin-top: 7vh;
+  padding-top: 7vh;
   height: 10vh;
   width: 100%;
   display: flex;
@@ -16,6 +16,18 @@
   justify-content: space-evenly;
   flex-direction: row;
   border-bottom: 2px solid #f7d6e0;
+}
+
+#top-display {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/bdEaster.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .box-doces {
@@ -52,9 +64,82 @@
   z-index: 2;
 }
 
+.content-top-display {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.content-top-display h1 {
+  font-size: 6em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-top-display p {
+  font-size: 1.5em;
+  margin: 40px;
+}
+
+.content-top-display a {
+  border: none;
+  padding: 20px;
+  background-color: #f2b5d4;
+  color: white;
+  border-radius: 15px;
+  transition: 0.2s ease-in;
+  text-decoration: none;
+}
+
+.content-top-display a:hover {
+  background-color: #fff;
+  color: #f2b5d4;
+  transition: 0.2s ease-in;
+}
+
+.dropdown button {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #f7d6e0;
+  border-radius: 10px;
+  background-color: white;
+  color: #f7d6e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-toggle::after {
+  content: "";
+  display: inline-block;
+  text-align: center;
+  margin-left: 1em;
+  margin-top: 2px;
+  border-top: 0.5em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-item {
+  color: #f7d6e0;
+}
+
+.dropdown-item:hover {
+  color: #f2b5d4;
+}
+
 @media screen and (max-width: 767.98px) {
-  #loja {
-    margin-top: 7vh;
+  #box-dropdown {
+    height: 20vh;
   }
   #box-dropdown .container-dropdown {
     margin-top: 35px;
@@ -64,6 +149,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  #top-display {
+    background-position: right;
   }
 
   .box-doces select,
@@ -84,5 +173,19 @@
   }
   #box-dropdown .container-dropdown .box-doces:last-child {
     order: 1;
+  }
+
+  .content-top-display h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+  }
+
+  .content-top-display p {
+    font-size: 1.1em;
+    margin: 40px;
+  }
+
+  .dropdown button {
+    width: 70vw;
   }
 }

@@ -3,9 +3,23 @@ const nav_slide = () => {
   const nav = document.querySelector(".nav-links-custom");
   const navLinks = document.querySelectorAll(".nav-links-custom-inner li");
   const body = document.querySelector("body");
+  const navbar = document.querySelector(".navbar-custom");
+
+  document.addEventListener("scroll", () => {
+    let sticky = nav.offsetTop;
+    if (window.pageYOffset >= sticky + 1) {
+      navbar.classList.add("white-bg");
+    } else {
+      navbar.classList.remove("white-bg");
+    }
+  });
 
   burguer.addEventListener("click", () => {
+    let sticky = nav.offsetTop;
     nav.classList.toggle("nav-active");
+    if (window.pageYOffset <= sticky) {
+      navbar.classList.toggle("white-bg");
+    }
 
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
@@ -39,6 +53,6 @@ const quantidade = (op, id) => {
 nav_slide();
 
 document.querySelector(".btn-search").onclick = () => {
-  const query = document.querySelector(".input-search").value
-  window.location.href = "/search/"+query
-}
+  const query = document.querySelector(".input-search").value;
+  window.location.href = "/search/" + query;
+};

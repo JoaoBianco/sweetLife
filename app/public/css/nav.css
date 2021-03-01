@@ -3,6 +3,10 @@
   src: url(fonts/Andika.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -12,6 +16,7 @@
 body {
   font-family: titulos;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-custom {
@@ -20,10 +25,16 @@ body {
   top: 0px;
   height: 7vh;
   width: 100%;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transition: 0.4s ease;
+}
+
+.white-bg {
+  background-color: white;
+  transition: 0.4s ease;
 }
 
 .navbar-custom .logo img {

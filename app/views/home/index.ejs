@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <nav class="navbar-custom p-5">
+    <nav class="navbar-custom">
       <div id="navbar" class="container-nav">
         <div class="logo">
           <a href="/"><img src="/images/logoComp.png" alt="" /></a>
@@ -73,15 +73,24 @@
       </div>
     </nav>
 
+    <section id="top-display">
+      <div class="content-top-display">
+        <h1>A pascoa chegou!</h1>
+        <p>O coelinho passou em nossa producao e deixou diversos novos produtos!</p>
+        <a href='/filter/5/#box-dropdown'>Venha conferir!</a>
+      </div>
+    </section>
+
+
     <section id="box-dropdown">
-      <div class="container-dropdown mt-5">
-        <div class="box-doces mt-3">
+      <div class="container-dropdown">
+        <div class="box-doces">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Filtro
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/">Selecione</a>
+              <a class="dropdown-item" href="/">Nada</a>
               <a class="dropdown-item" href="/filter/1">Tradicional</a>
               <a class="dropdown-item" href="/filter/2">Diet</a>
               <a class="dropdown-item" href="/filter/3">Vegano</a>
@@ -90,15 +99,16 @@
             </div>
           </div>
         </div>
-        <div class="box-doces mt-3">
-          <input type="search" class="input-search"><button class="btn-search"><i class="fas fa-search"></i></button>
+        <div class="box-doces">
+          <input type="search" class="input-search"><button class="btn-search"><i style="color: #f7d6e0;" class="fas fa-search"></i></button>
         </div>
       </div>
     </section>
 
     <!-- Loja Produtos - Cards -->
     <section id="loja">
-      <div class="linha mt-5">
+
+      <div class="linha">
         <%for(let i = 0; i<produto.length;i++){%>
         <div class="dbtn_info">
           <!-- Modal informação produto -->
@@ -164,7 +174,7 @@
             </div>
           </div>
         </div>
-
+        <!-- End Modal -->
         <div class="coluna">
           <div class="card_produto">
             <a
