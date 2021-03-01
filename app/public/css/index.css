@@ -137,6 +137,10 @@
   color: #f2b5d4;
 }
 
+.dropdown-item:active {
+  background-color: transparent;
+}
+
 @media screen and (max-width: 767.98px) {
   #box-dropdown {
     height: 20vh;
