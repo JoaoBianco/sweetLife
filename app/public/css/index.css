@@ -25,6 +25,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,6 +94,15 @@
   border-radius: 15px;
   transition: 0.2s ease-in;
   text-decoration: none;
+  font-size: 1.6em;
+}
+
+.content-top-display a:nth-child(5) {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 1.2em;
 }
 
 .content-top-display a:hover {
