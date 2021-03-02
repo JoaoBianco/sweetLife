@@ -1,0 +1,155 @@
+#carrinho {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#inner-carrinho {
+  background-color: #f7d6e0;
+  width: 80%;
+  height: 70vh;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px;
+}
+
+#carrinho-produtos {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+#carrinho-produtos::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+}
+
+#carrinho-produtos::-webkit-scrollbar-thumb {
+  background: #aeaeae;
+}
+
+#carrinho-info {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info-produtos {
+  border-radius: 10px;
+  height: 80%;
+  width: 70%;
+  background-color: white;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.info-precos {
+  overflow-y: auto;
+  height: 80%;
+  width: 100%;
+  padding: 15px;
+}
+
+.info-precos::-webkit-scrollbar {
+  width: 5px;
+  background-color: white;
+}
+
+.info-precos::-webkit-scrollbar-thumb {
+  background: #aeaeae;
+}
+
+.info-precos ul li {
+  list-style: none;
+}
+
+.inner-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-total {
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  border-top: 2px solid black;
+}
+
+.info-botao {
+  width: 70%;
+}
+
+.info-botao button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inner-carrinho-produto {
+  width: 20%;
+  height: 175px;
+  background-color: white;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 15px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inner-carrinho-produto img {
+  border-radius: 5px;
+  width: 50%;
+}
+
+@media (max-width: 1199.98px) {
+  #inner-carrinho {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  #carrinho-produtos {
+    width: 100%;
+    height: 50%;
+  }
+  #carrinho-info {
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+  }
+  .info-produtos {
+    height: 70%;
+  }
+  .info-total {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .inner-carrinho-produto {
+    height: 80%;
+    width: 80%;
+  }
+  .info-botao {
+    padding: 5px;
+  }
+  .info-botao button {
+    padding: 5px;
+    height: 110%;
+  }
+}
