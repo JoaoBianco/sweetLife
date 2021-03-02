@@ -1,3 +1,4 @@
+@import "index.css";
 #loja {
   margin-top: 7vh;
 
@@ -69,7 +70,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f7d6e0;
+  background-color: var(--softPink);
   border-radius: 10px;
   height: 480px;
   display: flex;

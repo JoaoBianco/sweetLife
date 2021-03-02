@@ -1,3 +1,8 @@
+:root {
+  --softPink: #f7d6e0;
+  --darkPink: #f2b5d4;
+}
+
 #box-dropdown {
   padding-top: 7vh;
   height: 10vh;
@@ -15,7 +20,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  border-bottom: 2px solid #f7d6e0;
+  border-bottom: 2px solid var(--darkPink);
 }
 
 #top-display {
@@ -40,7 +45,7 @@
   height: 50px;
   width: 200px;
   border-radius: 10px;
-  border: 2px solid #f7d6e0;
+  border: 2px solid var(--darkPink);
   background-color: white;
 }
 
@@ -89,7 +94,7 @@
 .content-top-display a {
   border: none;
   padding: 20px;
-  background-color: #f2b5d4;
+  background-color: var(--darkPink);
   color: white;
   border-radius: 15px;
   transition: 0.2s ease-in;
@@ -114,10 +119,10 @@
 .dropdown button {
   width: 200px;
   height: 50px;
-  border: 2px solid #f7d6e0;
+  border: 2px solid var(--darkPink);
   border-radius: 10px;
   background-color: white;
-  color: #f7d6e0;
+  color: var(--darkPink);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,11 +145,11 @@
 }
 
 .dropdown-item {
-  color: #f7d6e0;
+  color: var(--softPink);
 }
 
 .dropdown-item:hover {
-  color: #f2b5d4;
+  color: var(--darkPink);
 }
 
 .dropdown-item:active {
