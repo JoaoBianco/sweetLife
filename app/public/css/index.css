@@ -1,6 +1,8 @@
 :root {
   --softPink: #f7d6e0;
   --darkPink: #f2b5d4;
+  --blue: #1f91a7;
+  --black: #333;
 }
 
 #box-dropdown {
@@ -59,7 +61,7 @@
   background-color: white;
   color: black;
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 15px;
 }
 
@@ -80,15 +82,16 @@
   color: white;
 }
 
-.content-top-display h1 {
-  font-size: 6em;
-  font-weight: bold;
+.content-top-display h2 {
+  font-size: 5rem;
   text-align: center;
+  letter-spacing: 5px;
 }
 
 .content-top-display p {
-  font-size: 1.5em;
-  margin: 40px;
+  font-size: 1.5rem;
+  line-height: 8rem;
+  color: rgb(212, 212, 212);
 }
 
 .content-top-display a {
@@ -122,7 +125,7 @@
   border: 2px solid var(--darkPink);
   border-radius: 10px;
   background-color: white;
-  color: var(--darkPink);
+  color: var (--black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,11 +148,11 @@
 }
 
 .dropdown-item {
-  color: var(--softPink);
+  color: var(--black);
 }
 
 .dropdown-item:hover {
-  color: var(--darkPink);
+  color: var(--black);
 }
 
 .dropdown-item:active {
@@ -194,14 +197,16 @@
     order: 1;
   }
 
-  .content-top-display h1 {
-    font-size: 3.5em;
+  .content-top-display h2 {
+    font-size: 3rem;
     font-weight: bold;
   }
 
   .content-top-display p {
-    font-size: 1.1em;
+    font-size: 1.2rem;
+    line-height: 1rem;
     margin: 40px;
+    color: rgb(212, 212, 212);
   }
 
   .dropdown button {

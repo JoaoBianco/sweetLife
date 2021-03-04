@@ -118,6 +118,10 @@
   width: 50%;
 }
 
+.content-top-display h2 {
+  font-size: 5.5em;
+}
+
 @media (max-width: 1199.98px) {
   #inner-carrinho {
     flex-wrap: nowrap;
