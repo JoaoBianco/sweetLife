@@ -78,7 +78,7 @@
     </nav>
 
     <section id="login-container">
-      <form>
+      <form action="/login" method="POST">
         <div class="form-row">
           <div class="col-md-12">
             <label for="email">Email</label>
@@ -86,6 +86,7 @@
               type="email"
               class="form-control"
               id="email"
+              name="email"
               aria-describedby="emailHelp"
               placeholder="Digite seu email"
             />
@@ -96,6 +97,7 @@
               type="password"
               class="form-control"
               id="senha"
+              name="password"
               placeholder="Digite sua senha"
             />
           </div>
