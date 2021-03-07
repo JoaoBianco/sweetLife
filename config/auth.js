@@ -1,12 +1,13 @@
 const localStrategy = require("passport-local").Strategy
 const bcrypt = require("bcryptjs")
-const user = require("../app/services/loginService")
+const DBConnection = require("./dbConnection")
 
 
 module.exports = (passport) => {
     passport.use(new localStrategy({usernameField: 'email', passwordField: 'password'}, (email, password, done) => {
-        user.findUserByEmail(email).then((user) => {
+        user = findUserByEmail(email).then((user) => {
             if(!user){
+                console.log("não existe")
                 return done(null, false, {message: "não existe"})
             }
             
@@ -23,15 +24,55 @@ module.exports = (passport) => {
         })
     }))
 
+    let findUserByEmail = (email) => {
+        return new Promise((resolve, reject) => {
+            try {
+                DBConnection.query(
+                    ' SELECT * FROM `testeauth` WHERE `email` = ?  ', email,
+                    function(err, rows) {
+                        if (err) {
+                            reject(err)
+                        }
+                        let user = rows[0];
+                        resolve(user);
+                    }
+                );
+            } catch (err) {
+                reject(err);
+            }
+        });
+    };
+    
+    let findUserById = (id) => {
+        return new Promise((resolve, reject) => {
+            try {
+                DBConnection.query(
+                    ' SELECT * FROM `testeauth` WHERE `id` = ?  ', id,
+                    function(err, rows) {
+                        if (err) {
+                            reject(err)
+                        }
+                        let user = rows[0];
+                        resolve(user);
+                    }
+                );
+            } catch (err) {
+                reject(err);
+            }
+        });
+    };
+
     passport.serializeUser((user, done) =>{
         done(null, user.id)
     })
 
-    passport.deserializeUser((id, done) =>{
-        user.findUserById(id, (error, user) =>{
-            done(error, user)
-        })
-    })
+    passport.deserializeUser((id, done) => {
+        user = findUserById(id).then((user) => {
+            return done(null, user);
+        }).catch(error => {
+            return done(error, null)
+        });
+    });
 
     
 }
