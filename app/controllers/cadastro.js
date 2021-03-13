@@ -15,28 +15,13 @@ module.exports.cadastrando = (app, req, res) => {
       var salt = bcrypt.genSaltSync(10);
       req.body.senha = bcrypt.hashSync(req.body.senha, salt);
 
-      const client = new Object
-      client.nome = req.body.nome
-      client.sobrenome = req.body.sobrenome
-      client.email = req.body.email
-      client.senha = req.body.senha
+      cadastrando.insertClient(req.body, function(error, result) {
+        req.body.idclient = result.insertId
 
-      cadastrando.insertClient(client, function(error, result) {
-        const idClient = result.insertId
+        cadastrando.insertAddress(req.body, function(error, result) {
+          req.body.idEndereco = result.insertId
 
-        const endereco = new Object
-        endereco.endereco = req.body.endereco
-        endereco.bairro = req.body.bairro
-        endereco.complemento = req.body.complemento
-        endereco.numero = req.body.number
-
-        cadastrando.insertAddress(endereco, function(error, result) {
-          const idEndereco = result.insertId
-          
-          const cadd = new Object
-          cadd.idclient = idClient
-          cadd.idEndereco = idEndereco
-          cadastrando.clientAddress(cadd, function(error, result){
+          cadastrando.clientAddress(req.body, function(error, result){
             res.status(200).send({"result": true})
           })
         })
