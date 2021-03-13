@@ -52,7 +52,54 @@ const quantidade = (op, id) => {
 
 nav_slide();
 
-document.querySelector(".btn-search").onclick = () => {
-  const query = document.querySelector(".input-search").value;
-  window.location.href = "/search/" + query;
-};
+if (document.querySelector(".btn-search")) {
+  document.querySelector(".btn-search").onclick = () => {
+    const query = document.querySelector(".input-search").value;
+    window.location.href = "/search/" + query;
+  };
+}
+
+if (document.getElementById('formsubmit')) {
+
+  document.getElementById('formsubmit').addEventListener("submit", function(event){
+    event.preventDefault()
+
+    const nome = document.getElementById("nome").value
+    const sobrenome = document.getElementById("sobrenome").value
+    const email = document.getElementById("email").value
+    const endereco = document.getElementById("endereco").value
+    const bairro = document.getElementById("bairro").value
+    const numero = document.getElementById("numero").value
+    const complemento = document.getElementById("complemento").value
+    const senha = document.getElementById("senha").value
+    const confsenha = document.getElementById("confsenha").value
+
+    const client = new Object
+    client.nome = nome
+    client.sobrenome = sobrenome
+    client.email = email
+    client.endereco = endereco
+    client.bairro = bairro
+    client.numero = numero
+    client.complemento = complemento
+    client.senha = senha
+    client.confsenha = confsenha
+
+    fetch('/cadastro', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(client)
+    }).then(res => res.json())
+    .then(res => {
+      if (res.result) {
+        console.log("Conta criada com sucesso!")
+      }else{
+        console.log("Esse e-mail já existe!")
+      }
+    });
+
+  })
+}
