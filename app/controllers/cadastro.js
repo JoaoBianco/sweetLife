@@ -19,7 +19,7 @@ module.exports.cadastrando = (app, req, res) => {
         req.body.idclient = result.insertId
 
         cadastrando.insertAddress(req.body, function(error, result) {
-          req.body.idEndereco = result.insertId
+          req.body.idendereco = result.insertId
 
           cadastrando.clientAddress(req.body, function(error, result){
             res.status(200).send({"result": true})

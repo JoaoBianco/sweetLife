@@ -15,7 +15,7 @@ class cadastrando {
   };
 
   clientAddress = (cadd, callback) => {
-    this._connection.query(`INSERT INTO enderecocliente (idendereco, idcliente) VALUES ('${cadd.idendereco}', '${cadd.idcliente}')`, callback)
+    this._connection.query(`INSERT INTO enderecocliente (idendereco, idcliente) VALUES ('${cadd.idendereco}', '${cadd.idclient}')`, callback)
   }
 
 }
