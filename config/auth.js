@@ -4,25 +4,23 @@ const DBConnection = require("./dbConnection")
 
 
 module.exports = (passport) => {
-    passport.use(new localStrategy({usernameField: 'email', passwordField: 'password'}, (email, password, done) => {
+    passport.use(new localStrategy({ usernameField: 'email', passwordField: 'password' }, (email, password, done) => {
         user = findUserByEmail(email).then((user) => {
-            if(!user){
+            if (!user) {
                 console.log("não existe")
-                return done(null, false, {message: "não existe"})
+                return done(null, false, { message: "não existe" })
             }
 
-            var salt = bcrypt.genSaltSync(10);
-            user.senha = bcrypt.hashSync(password, salt)
-            bcrypt.compare(password, user.senha, (error, success) => {
-                if(success){
-                    console.log("senha certa")
-                    return done(null, user)
-                }
-                else{
-                    console.log("senha errada")
-                    return done(null, false, {message: "senha inválida"})
-                }
-            })
+            senhaCerta = bcrypt.compareSync(password, user.senha)
+            if (senhaCerta) {
+                console.log("senha certa")
+                return done(null, user)
+            }
+            else {
+                console.log("senha errada")
+                return done(null, false, { message: "senha inválida" })
+            }
+
         })
     }))
 
@@ -31,26 +29,7 @@ module.exports = (passport) => {
             try {
                 DBConnection.query(
                     ' SELECT * FROM `cliente` WHERE `email` = ?  ', email,
-                    function(err, rows) {
-                        if (err) {
-                            reject(err)
-                        }
-                        let user = rows[0];
-                        resolve(user);
-                    }
-                );
-            } catch (err) {
-                reject(err);
-            }
-        });
-    };
-    
-    let findUserById = (id) => {
-        return new Promise((resolve, reject) => {
-            try {
-                DBConnection.query(
-                    ' SELECT * FROM `cliente` WHERE `id` = ?  ', id,
-                    function(err, rows) {
+                    function (err, rows) {
                         if (err) {
                             reject(err)
                         }
@@ -64,7 +43,26 @@ module.exports = (passport) => {
         });
     };
 
-    passport.serializeUser((user, done) =>{
+    let findUserById = (id) => {
+        return new Promise((resolve, reject) => {
+            try {
+                DBConnection.query(
+                    ' SELECT * FROM `cliente` WHERE `id` = ?  ', id,
+                    function (err, rows) {
+                        if (err) {
+                            reject(err)
+                        }
+                        let user = rows[0];
+                        resolve(user);
+                    }
+                );
+            } catch (err) {
+                reject(err);
+            }
+        });
+    };
+
+    passport.serializeUser((user, done) => {
         done(null, user.id)
     })
 
@@ -76,5 +74,5 @@ module.exports = (passport) => {
         });
     });
 
-    
+
 }
