@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var expressValidator = require("express-validator");
 
 const session = require("express-session")
-const flash = require("connect-flash")
+//const flash = require("connect-flash")
 
 const passport = require("passport")
 require("./auth")(passport)
@@ -33,6 +33,7 @@ app.use((req, res, next) =>{
   if(req.isAuthenticated()){    //Mostra se está autenticado
     console.log("logado")
   }
+  res.locals.user = req.user || null
   next()
 })
 
