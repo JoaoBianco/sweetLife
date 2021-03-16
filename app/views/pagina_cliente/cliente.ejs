@@ -53,12 +53,18 @@
             </li>
           </ul>
           <ul class="nav-links-custom-inner">
+            <%if (!user){%>
             <li>
               <a href="/cadastro">Cadastrar</a>
             </li>
             <li>
               <a class="nav-login" href="/login">Login</a>
             </li>
+            <%}else{%>
+            <li>
+              <a class="car" href="/cliente"><i class="fas fa-user"></i></a>
+            </li>
+            <%}%>
           </ul>
         </ul>
         <div class="last-nav">

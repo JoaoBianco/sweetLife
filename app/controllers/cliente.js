@@ -1,3 +1,7 @@
 module.exports.cliente = (app, req, res) => {
-  res.render("pagina_cliente/cliente");
+  if (req.isAuthenticated()) {
+    res.render("pagina_cliente/cliente");
+  } else {
+    res.status(404).render("error/404");
+  }
 };
