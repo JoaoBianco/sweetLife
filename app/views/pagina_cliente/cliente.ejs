@@ -91,13 +91,13 @@
             alt="img-cliente"
           />
           <div class="aside-container-options">
-            <a class="aside-option">
+            <a id="aside-dados" class="aside-option">
               <p>Meus dados</p>
             </a>
-            <a class="aside-option">
+            <a id="aside-pedidos" class="aside-option">
               <p>Meus pedidos</p>
             </a>
-            <a class="aside-option">
+            <a id="aside-enderecos" class="aside-option">
               <p>Meus enderecos</p>
             </a>
             <a class="aside-option">
@@ -106,7 +106,21 @@
           </div>
         </div>
       </aside>
-      <section id="conteudo-cliente"></section>
+      <section id="conteudo-cliente">
+        <div id="meus-dados" class="">
+          <div class="dados-topo"><h2>Olá, NOME SOBRENOME</h2></div>
+
+          <div class="dados-gerais">
+            <h3>Seu email é:</h3>
+            <p>cliente@gmail.com</p>
+            <br />
+            <h3>Sua senha é:</h3>
+            <p>**********</p>
+          </div>
+        </div>
+        <div id="meus-pedidos"></div>
+        <div id="meus-enderecos"></div>
+      </section>
     </main>
 
     <script src="/js/index-js.js"></script>
@@ -121,5 +135,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/cliente.js"></script>
   </body>
 </html>
