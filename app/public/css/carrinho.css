@@ -1,10 +1,13 @@
 #carrinho {
-  background-color: white;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("/images/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #inner-carrinho {
@@ -15,6 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgb(128, 128, 128);
 }
 
 #carrinho-produtos {

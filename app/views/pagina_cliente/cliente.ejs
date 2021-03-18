@@ -85,11 +85,9 @@
     <main>
       <aside id="aside-cliente">
         <div class="aside-items">
-          <img
-            class="aside-img"
-            src="../images/client.jpeg"
-            alt="img-cliente"
-          />
+          <div class="aside-img">
+            <i class="fas fa-user"></i>
+          </div>
           <div class="aside-container-options">
             <a id="aside-dados" class="aside-option">
               <p>Meus dados</p>
@@ -107,7 +105,7 @@
         </div>
       </aside>
       <section id="conteudo-cliente">
-        <div id="meus-dados" class="">
+        <div id="meus-dados" class="caixa-info">
           <div class="dados-topo"><h2>Olá, NOME SOBRENOME</h2></div>
 
           <div class="dados-gerais">
@@ -118,8 +116,8 @@
             <p>**********</p>
           </div>
         </div>
-        <div id="meus-pedidos"></div>
-        <div id="meus-enderecos"></div>
+        <div id="meus-pedidos" class="caixa-info esconder">Pedidos</div>
+        <div id="meus-enderecos" class="caixa-info esconder">Enderecos</div>
       </section>
     </main>
 

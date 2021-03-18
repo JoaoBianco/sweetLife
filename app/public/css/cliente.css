@@ -38,13 +38,14 @@ main {
   height: 3rem;
   text-align: center;
   background-color: var(--softPink);
+  box-shadow: 0px 2px 2px rgb(134, 134, 134);
 }
 
 .aside-img {
-  background-image: url("../images/client.jpeg");
+  font-size: 5rem;
+  color: var(--softPink);
   height: 150px;
   width: 150px;
-  border-radius: 50%;
   display: grid;
   place-items: center;
 }
@@ -64,18 +65,32 @@ main {
 
 #conteudo-cliente {
   width: 100%;
+  background-image: url("/images/background.png");
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Meus Dados */
 
 #meus-dados {
-  width: 100%;
-  height: 100%;
-  padding: 10%;
+  width: 50%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.caixa-info {
+  position: relative;
+  padding: 50px;
+  width: 30%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 7px 7px 30px 3px rgba(77, 77, 77, 0.1);
+  border-radius: 60px;
 }
 
 .dados-topo {
@@ -84,6 +99,10 @@ main {
 
 .dados-gerais {
   margin-bottom: auto;
+}
+
+.dados-gerais > p {
+  font-size: 2rem;
 }
 
 .dados-gerais > p:nth-of-type(1) {
@@ -107,6 +126,15 @@ main {
     height: 60vh;
   }
 
+  #meus-dados {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   #aside-cliente {
     position: absolute;
     bottom: 0;
@@ -123,5 +151,17 @@ main {
   .aside-items {
     height: 100%;
     background-color: var(--softPink);
+  }
+  .aside-option {
+    box-shadow: none;
+  }
+  .caixa-info {
+    position: relative;
+    padding: 25px;
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 7px 7px 30px 3px rgba(77, 77, 77, 0.1);
+    border-radius: 60px;
   }
 }
