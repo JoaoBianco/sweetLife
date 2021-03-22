@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/sobre.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet" />
 
-    <title>Sweet Life - sobre</title>
-    <link rel="shortcut icon" type="image/png" href="/images/icon-logo.png" />
-  </head>
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/sobre.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
 
-  <body>
-    <nav class="navbar-custom">
-      <div id="navbar" class="container-nav">
-        <div class="logo">
-          <a href="/"><img src="/images/logoComp.png" alt="" /></a>
-        </div>
-        <ul class="nav-links-custom">
-          <ul class="nav-links-custom-inner">
-            <li>
-              <a href="/">Inicio</a>
-            </li>
-            <li>
-              <a href="/sobre">Sobre</a>
-            </li>
-            <li>
-              <a href="">Contato</a>
-            </li>
-          </ul>
-          <ul class="nav-links-custom-inner">
-            <%if (!user){%>
+  <title>Sweet Life - sobre</title>
+  <link rel="shortcut icon" type="image/png" href="/images/icon-logo.png" />
+</head>
+
+<body>
+  <nav class="navbar-custom">
+    <div id="navbar" class="container-nav">
+      <div class="logo">
+        <a href="/"><img src="/images/logoComp.png" alt="" /></a>
+      </div>
+      <ul class="nav-links-custom">
+        <ul class="nav-links-custom-inner">
+          <li>
+            <a href="/">Inicio</a>
+          </li>
+          <li>
+            <a href="/sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="">Contato</a>
+          </li>
+        </ul>
+        <ul class="nav-links-custom-inner">
+          <%if (!user){%>
             <li>
               <a href="/cadastro">Cadastrar</a>
             </li>
@@ -59,56 +47,51 @@
               <a class="nav-login" href="/login">Login</a>
             </li>
             <%}else{%>
-            <li>
-              <a class="car" href="/cliente"><i class="fas fa-user"></i></a>
-            </li>
-            <%}%>
-          </ul>
+              <li>
+                <a class="car" href="/cliente"><i class="fas fa-user"></i></a>
+              </li>
+              <%}%>
         </ul>
-        <div class="last-nav">
-          <div class="burguer">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <div class="car">
-            <a href="/carrinho"
-              ><img src="/images/Carrinho.svg" alt="Carrinho"
-            /></a>
-          </div>
+      </ul>
+      <div class="last-nav">
+        <div class="burguer">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <div class="car">
+          <a href="/carrinho"><img src="/images/Carrinho.svg" alt="Carrinho" /></a>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section id="carrinho">
-      <div id="inner-carrinho">
-        <div id="carrinho-info">
-          <div class="info-produtos">
-            <img src="/images/sobreimagem.jpg" alt="sobre" width="330" height="400" style="border-radius: 15px;"/>
-            
-            
-          </div>
-          
+  <section id="carrinho">
+    <div id="inner-carrinho">
+      <div id="carrinho-info">
+        <div class="info-produtos">
+          <img src="/images/sobreimagem.jpg" alt="sobre" width="330" height="400" style="border-radius: 15px;" />
         </div>
-        <div class="inner-sobre-texto">
-          <p>A TRADIÇÃO</p>
-          <p>Nossa História</p>
-          <p>Tudo começou em 2000, em uma pequena confeitaria em Alfenas. Foi nesse local que Douglas e seu filho, Joaquim , produziram pela primeira vez o chocolate na forma sólida. Desde então, o nosso chocolate foi continuamente aperfeiçoado, tornando-se o que é hoje: cremoso e rico. Um sabor incomparável.</p>
-        </div>
+
       </div>
-    </section>
+      <div class="inner-sobre-texto">
+        <p>A TRADIÇÃO</p>
+        <p>Nossa História</p>
+        <p>Tudo começou em 2000, em uma pequena confeitaria em Alfenas. Foi nesse local que Douglas e seu filho, Joaquim
+          , produziram pela primeira vez o chocolate na forma sólida. Desde então, o nosso chocolate foi continuamente
+          aperfeiçoado, tornando-se o que é hoje: cremoso e rico. Um sabor incomparável.</p>
+      </div>
+    </div>
+  </section>
 
-    <script src="/js/index-js.js"></script>
-    <!-- Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="/js/index-js.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
