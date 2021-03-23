@@ -1,0 +1,51 @@
+#contato-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  form {
+    position: relative;
+    padding: 50px;
+    width: 30%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 7px 7px 30px 3px rgb(245 54 150 / 15%);
+    border-radius: 60px;
+  }
+  
+  @media (max-width: 575.98px) {
+    #contato-container form {
+      width: 90vw;
+    }
+    .btn-custom {
+      width: 60%;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #contato-container form {
+      width: 60vw;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    #contato-container form {
+      width: 50vw;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    #contato-container form {
+      width: 35vw;
+    }
+    label {
+      margin: 0.5em 0 0.5em 0.5em;
+    }
+  }
+  
