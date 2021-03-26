@@ -88,7 +88,7 @@
             <div class="item_<%= c.idpedido %> inner-carrinho-produto text-center">
               <img src="https://raw.githubusercontent.com/JoaoBianco/sweetLife/main/app/public/assets/<%= c.id %>.jpeg" alt="img" />
               <p><%= c.nome %></p>
-              <p>R$ <%= c.preco %>,00 <%= c.quantidade %>x</p>
+              <p class="price_<%= c.idpedido %>">R$ <%= c.preco %>,00 <%= c.quantidade %>x</p>
               <button id="pedido_<%= c.idpedido %>" class="btn btn-danger btn-sm btn-cartremove"><i class="fas fa-trash"></i> Remover</button>
             </div>
           <% }) %>
@@ -110,7 +110,7 @@
             <div class="info-total">
               <% var preco = cart.map(function(c) { return parseInt(c.preco)*parseInt(c.quantidade) }).reduce((a, b) => a + b, 0) -%>
               <p>Total:</p>
-              <p> R$ <%= preco %> </p>
+              <p class="info-price">R$ <%= preco %></p>
             </div>
           </div>
           <div class="info-botao">

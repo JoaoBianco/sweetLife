@@ -147,10 +147,21 @@ if (document.querySelector('.btn-cartremove')) {
       }).then(res => res.json())
       .then(res => {
         if (res.data) {
-          document.querySelector(`.item_${id[1]}`).remove()
           var cart_number = document.querySelector('#cart-number').innerHTML
           cart_number = parseInt(cart_number) - 1
           document.getElementById("cart-number").innerHTML = cart_number
+
+          const pricestring = document.querySelector(`.price_${id[1]}`).innerHTML.split(" ")
+          const price = pricestring[1].split(',')
+          const qnt = pricestring[2].split('x')
+          const priceunit = parseInt(price[0])*parseInt(qnt[0]);
+          const preco = document.querySelector('.info-price').innerHTML.split(" ")
+
+          const totalnovo = parseInt(preco[1])-priceunit;
+
+          document.querySelector('.info-price').innerHTML = 'R$ '+totalnovo
+          document.querySelector(`.item_${id[1]}`).remove()
+          document.querySelector(`.info_${id[1]}`).remove()
         }
       });
     })

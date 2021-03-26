@@ -13,23 +13,29 @@ module.exports.cadastrando = (app, req, res) => {
   var cadastrando = new app.app.models.cadastrando(connection);
 
   cadastrando.verifyEmail(req.body.email, function (error, result) {
-    if (result.length == 0) {
-      var salt = bcrypt.genSaltSync(10);
-      req.body.senha = bcrypt.hashSync(req.body.senha, salt);
+    if (error) {
+      console.error(error);
+    } else {
+      if (result.length > 0) {
+        res.status(200).send({ result: false });
+      } else {
+        var salt = bcrypt.genSaltSync(10);
+        req.body.senha = bcrypt.hashSync(req.body.senha, salt);
 
-      cadastrando.insertClient(req.body, function (error, result) {
-        req.body.idclient = result.insertId;
+        cadastrando.insertClient(req.body, function (error, result) {
+          req.body.idclient = result.insertId;
 
-        cadastrando.insertAddress(req.body, function (error, result) {
-          req.body.idendereco = result.insertId;
+          cadastrando.insertAddress(req.body, function (error, result) {
+            req.body.idendereco = result.insertId;
 
-          cadastrando.clientAddress(req.body, function (error, result) {
-            res.status(200).send({ result: true });
+            cadastrando.clientAddress(req.body, function (error, result) {
+              res.status(200).send({ result: true });
+            });
           });
         });
-      });
-    } else {
-      res.status(200).send({ result: false });
+      }
+
     }
+
   });
 };
