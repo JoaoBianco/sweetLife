@@ -93,6 +93,16 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.btn_carrinho:disabled {
+  background-color: #236c7a;
+  cursor: not-allowed;
+}
+
+.btn_carrinho:disabled:hover {
+  background-color: #236c7a;
+}
+
 .btn_carrinho:hover {
   background-color: #0c7a8f;
 }

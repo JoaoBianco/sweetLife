@@ -72,9 +72,10 @@
             <div class="line3"></div>
           </div>
           <div class="car">
-            <a href="/carrinho"
-              ><img src="/images/Carrinho.svg" alt="Carrinho"
-            /></a>
+            <span>
+              <a href="/carrinho"><img src="/images/carrinho.svg" alt="Carrinho"></a>
+              <span class="badge badge-primary" id="cart-number"><%= (!!locals.ncart) ? ncart.map(n => n.countCart):0 %></span>
+            </span>
           </div>
         </div>
       </div>
@@ -83,83 +84,33 @@
     <section id="carrinho">
       <div id="inner-carrinho">
         <div id="carrinho-produtos">
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
-          <div class="inner-carrinho-produto">
-            <img src="images\bdEaster.jpg" alt="img" />
-            <p>Nome Produto</p>
-            <p>R$ 10,00 x2</p>
-          </div>
+          <% cart.map(c => {%>
+            <div class="item_<%= c.idpedido %> inner-carrinho-produto text-center">
+              <img src="https://raw.githubusercontent.com/JoaoBianco/sweetLife/main/app/public/assets/<%= c.id %>.jpeg" alt="img" />
+              <p><%= c.nome %></p>
+              <p>R$ <%= c.preco %>,00 <%= c.quantidade %>x</p>
+              <button id="pedido_<%= c.idpedido %>" class="btn btn-danger btn-sm btn-cartremove"><i class="fas fa-trash"></i> Remover</button>
+            </div>
+          <% }) %>
         </div>
         <div id="carrinho-info">
           <div class="info-produtos">
             <div class="info-precos">
               <ul>
                 <li>
-                  <div class="inner-info">
-                    <p class="inner-info-nome">Nome Produto</p>
-                    <p class="inner-info-preco">R$10,00 x3</p>
-                  </div>
-                </li>
+                  <% cart.map(c => {%>
+                    <div class="info_<%= c.idpedido %> inner-info">
+                      <p class="inner-info-nome"><%= c.nome %></p>
+                      <p class="inner-info-preco">R$ <%= c.preco %> x<%= c.quantidade %></p>
+                    </div>
+                  <%})%>
+                  </li>
               </ul>
             </div>
             <div class="info-total">
+              <% var preco = cart.map(function(c) { return parseInt(c.preco)*parseInt(c.quantidade) }).reduce((a, b) => a + b, 0) -%>
               <p>Total:</p>
-              <p>R$ = 10,00</p>
+              <p> R$ <%= preco %> </p>
             </div>
           </div>
           <div class="info-botao">

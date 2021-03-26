@@ -103,3 +103,56 @@ if (document.getElementById('formsubmit')) {
 
   })
 }
+
+if (document.querySelector(".btn_carrinho")) {
+  const btn = document.querySelectorAll(".btn_carrinho")
+
+  for (var i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", (e) => {
+      const idProduto = e.srcElement.id.split('_')
+      const qnt = document.querySelector(`.number_${idProduto[1]}`).innerHTML;
+
+      fetch('/carrinho', {
+        method: 'post',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({idproduto: idProduto[1], quantidade: qnt})
+      }).then(res => res.json())
+      .then(res => {
+        if (res.data) {
+          var cart_number = document.querySelector('#cart-number').innerHTML
+          cart_number = parseInt(cart_number) + 1
+          document.getElementById("cart-number").innerHTML = cart_number
+        }
+      });
+    })
+  }
+}
+
+if (document.querySelector('.btn-cartremove')) {
+  const btn = document.querySelectorAll('.btn-cartremove')
+  for (var i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('click', (e) => {
+      const id = e.srcElement.id.split('_')
+      console.log(id[1])
+      fetch('/carrinho', {
+        method: 'delete',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id: id[1]})
+      }).then(res => res.json())
+      .then(res => {
+        if (res.data) {
+          document.querySelector(`.item_${id[1]}`).remove()
+          var cart_number = document.querySelector('#cart-number').innerHTML
+          cart_number = parseInt(cart_number) - 1
+          document.getElementById("cart-number").innerHTML = cart_number
+        }
+      });
+    })
+  }
+}
