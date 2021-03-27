@@ -125,6 +125,10 @@
   display: block;
 }
 
+.inner-carrinho-produto:hover {
+  height: 200px;
+}
+
 .inner-carrinho-produto img {
   border-radius: 5px;
   width: 50%;

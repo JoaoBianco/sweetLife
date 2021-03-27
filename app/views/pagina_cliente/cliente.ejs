@@ -75,8 +75,12 @@
           </div>
           <div class="car">
             <span>
-              <a href="/carrinho"><img src="/images/carrinho.svg" alt="Carrinho"></a>
-              <span class="badge badge-primary" id="cart-number"><%= (!!locals.ncart) ? ncart.map(n => n.countCart):0 %></span>
+              <a href="/carrinho"
+                ><img src="/images/carrinho.svg" alt="Carrinho"
+              /></a>
+              <span class="badge badge-primary" id="cart-number"
+                ><%= (!!locals.ncart) ? ncart.map(n => n.countCart):0 %></span
+              >
             </span>
           </div>
         </div>
@@ -107,14 +111,12 @@
       </aside>
       <section id="conteudo-cliente">
         <div id="meus-dados" class="caixa-info">
-          <div class="dados-topo"><h2>Olá, NOME SOBRENOME</h2></div>
+          <div class="dados-topo"><h2><%=user.nome%></h2></div>
 
           <div class="dados-gerais">
             <h3>Seu email é:</h3>
-            <p>cliente@gmail.com</p>
+            <p><%=user.email%></p>
             <br />
-            <h3>Sua senha é:</h3>
-            <p>**********</p>
           </div>
         </div>
         <div id="meus-pedidos" class="caixa-info esconder">Pedidos</div>
