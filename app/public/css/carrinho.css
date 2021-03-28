@@ -104,7 +104,7 @@
 
 .inner-carrinho-produto {
   width: 20%;
-  height: 175px;
+  height: 200px;
   background-color: white;
   margin: 15px;
   padding: 10px;
@@ -126,7 +126,7 @@
 }
 
 .inner-carrinho-produto:hover {
-  height: 200px;
+  height: 220px;
 }
 
 .inner-carrinho-produto img {
@@ -196,8 +196,12 @@
 
   .inner-carrinho-produto {
     margin: 5px;
-    height: 40%;
+    height: 50%;
     width: 80%;
+  }
+
+  .inner-carrinho-produto:hover {
+    height: 60%;
   }
 
   .info-precos {
