@@ -36,7 +36,7 @@ module.exports.cadastrando = (app, req, res) => {
 
                 cadastrando.clientAddress(req.body, function (error, result) {
                   if (error) {
-                    console.error(console.error(););
+                    console.error(error);
                   } else {
                     res.status(200).send({ result: true });
                   }
