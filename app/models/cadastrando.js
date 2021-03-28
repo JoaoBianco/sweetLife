@@ -7,7 +7,7 @@ class cadastrando {
   };
 
   verifyEmail = (email, callback) => {
-    this._connection.query("select email from cliente where email = ?", email, callback);
+    this._connection.query(`SELECT email FROM cliente WHERE email = '${email}'`, callback);
   };
 
   insertAddress = (endereco, callback) => {

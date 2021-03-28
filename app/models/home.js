@@ -15,9 +15,8 @@ class produto {
   };
 
   search = (query, callback) => {
-    const queryString = `SELECT * FROM produto WHERE nome LIKE '%${query}%'`;
-    this._connection.query(queryString.toString(), callback);
-  };
+    this._connection.query(`SELECT * FROM produto WHERE nome LIKE '%${query}%'`, callback);
+  };  
 }
 
 module.exports = () => {

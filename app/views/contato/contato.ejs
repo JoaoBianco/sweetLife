@@ -45,10 +45,10 @@
               <a href="/">Inicio</a>
             </li>
             <li>
-              <a href="">Sobre</a>
+              <a href="/sobre">Sobre</a>
             </li>
             <li>
-              <a href="">Contato</a>
+              <a href="/contato">Contato</a>
             </li>
           </ul>
           <ul class="nav-links-custom-inner">
@@ -73,9 +73,10 @@
             <div class="line3"></div>
           </div>
           <div class="car">
-            <a href="/carrinho"
-              ><img src="/images/Carrinho.svg" alt="Carrinho"
-            /></a>
+            <span>
+              <a href="/carrinho"><img src="/images/carrinho.svg" alt="Carrinho"></a>
+              <span class="badge badge-primary" id="cart-number"><%= (!!locals.ncart) ? ncart.map(n => n.countCart):0 %></span>
+            </span>
           </div>
         </div>
       </div>
@@ -101,7 +102,7 @@
             <option>Reclamações sobre o produto</option>
             <option>Outro</option>
           </select>
-        
+
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Mensagem</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua mensagem" rows="3"></textarea>
@@ -111,7 +112,7 @@
       <div class="botaoEnviar">
         <button type="submit" class="btn-custom">Enviar</button>
       </div>
-     
+
     </section>
 
     <script src="/js/index-js.js"></script>

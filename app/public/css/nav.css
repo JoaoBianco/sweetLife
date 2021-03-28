@@ -118,6 +118,21 @@ body {
   margin: 10px;
 }
 
+#cart-number {
+    font-size: 14px;
+    padding: 1px 8px;
+    vertical-align: top;
+    margin-left: -16px;
+    margin-top: 4px;
+}
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
 @media screen and (max-width: 924px) {
   body {
     overflow-x: hidden;
