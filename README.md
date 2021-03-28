@@ -8,7 +8,7 @@ O criamos utilizando as últimas tecnologias do mercado.
 * HTML
 * CSS
 
-# Como executar em uma maquina local
+# Como executar em uma máquina local
 Basta adicionar o arquivo .env na raiz do projeto com as credenciais de login do banco de dados (no mesmo padrão que o arquivo .env_example).
 
 # Download do projeto
