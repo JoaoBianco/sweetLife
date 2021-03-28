@@ -10,7 +10,7 @@ O criamos utilizando as últimas tecnologias do mercado.
 
 # Como executar em uma máquina local
 Adicione o arquivo .env na raiz do projeto com as credenciais de login do banco de dados (no mesmo padrão que o arquivo .env_example).
-Então basta inicia o servidor com o comando node app. O link de acesso é: <localhost:3306>.
+Então basta iniciar o servidor com o comando node app. O link de acesso é: <localhost:3306>.
 
 # Download do projeto
 Baixe a última versão do [SweetLife aqui](https://codeload.github.com/JoaoBianco/sweetLife/zip/refs/heads/main).
