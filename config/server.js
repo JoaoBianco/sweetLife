@@ -34,8 +34,8 @@ app.use(flash());
 
 app.use((req, res, next) => {
   if (req.isAuthenticated()) {
-    //Mostra se está autenticado
-    console.log("logado");
+    ////Mostra se está autenticado
+    //console.log("logado");
   }
   res.locals.user = req.user || null;
   next();

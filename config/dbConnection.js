@@ -1,15 +1,11 @@
 var mysql = require("mysql");
-//require("dotenv/config");
+require("dotenv/config");
 
 var connection = mysql.createPool({ //Cria uma Pool ao invés de uma conection
-  // host: process.env.DB_HOST_KEY,
-  // user: process.env.DB_USER_KEY,
-  // password: process.env.DB_PASSWORD_KEY,
-  // database: process.env.DB_SCHEMA_KEY,
-  host: "us-cdbr-east-03.cleardb.com",
-  user: "b37f28773e88a7",
-  password: "b47f205c",
-  database: "heroku_4c3b64074699933",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_SCHEMA,
 })
 
 connection.getConnection((err) => {
