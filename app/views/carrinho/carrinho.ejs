@@ -97,9 +97,7 @@
               alt="img"
             />
             <p><%= c.nome %></p>
-            <p class="price_<%= c.idpedido %>">
-              <%= c.quantidade %>x R$ <%= c.preco %>,00
-            </p>
+            <p class="price_<%= c.idpedido %>"><%= c.quantidade %>x R$ <%= c.preco %>,00</p>
             <button
               id="pedido_<%= c.idpedido %>"
               class="btn btn-danger btn-sm btn-cartremove"
@@ -126,11 +124,9 @@
               </ul>
             </div>
             <div class="info-total">
-              <% var preco = cart.map(function(c) { return
-              parseInt(c.preco)*parseInt(c.quantidade) }).reduce((a, b) => a +
-              b, 0) -%>
+              <% var preco = cart.map(function(c) { return parseInt(c.preco)*parseInt(c.quantidade) }).reduce((a, b) => a+b, 0) -%>
               <p>Total:</p>
-              <p class="info-price">R$ <%= preco %></p>
+              <p class="info-price">R$ <%=preco%></p>
             </div>
           </div>
           <div class="info-botao">
