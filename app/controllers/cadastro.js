@@ -23,15 +23,27 @@ module.exports.cadastrando = (app, req, res) => {
         req.body.senha = bcrypt.hashSync(req.body.senha, salt);
 
         cadastrando.insertClient(req.body, function (error, result) {
-          req.body.idclient = result.insertId;
+          if (error) {
+            console.error(error);
+          } else {
+            req.body.idclient = result.insertId;
 
-          cadastrando.insertAddress(req.body, function (error, result) {
-            req.body.idendereco = result.insertId;
+            cadastrando.insertAddress(req.body, function (error, result) {
+              if (error) {
+                console.error(error);
+              } else {
+                req.body.idendereco = result.insertId;
 
-            cadastrando.clientAddress(req.body, function (error, result) {
-              res.status(200).send({ result: true });
+                cadastrando.clientAddress(req.body, function (error, result) {
+                  if (error) {
+                    console.error(console.error(););
+                  } else {
+                    res.status(200).send({ result: true });
+                  }
+                });
+              }
             });
-          });
+          }
         });
       }
 
