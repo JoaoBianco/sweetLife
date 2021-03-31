@@ -17,5 +17,9 @@ Então basta iniciar o servidor com o comando node app. O link de acesso será: 
 
 # Download do projeto
 Baixe a última versão do [SweetLife aqui](https://codeload.github.com/JoaoBianco/sweetLife/zip/refs/heads/main).
+
+# Acesse o SweetLife
+Hospedado na umbler pelo [link](http://app-sweetlife-com.umbler.net/).
+
 ***
 _O SweetLife é um projeto desenvolvido para a matéria Gestão do Ciclo de Vida da Aplicação da [Universidade Federal de Alfenas](https://www.unifal-mg.edu.br)._
